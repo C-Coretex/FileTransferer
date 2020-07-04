@@ -1,9 +1,16 @@
 package main
 
 import(
-	 Console "fmt"
+	 Output "fmt"
+	 Input "bufio"
+	 "os"
 )
 
 func main() {
-	Console.Println("Hey all, I'm the Go app");
+	Output.Println("Hey all, I'm the Go app")
+	Output.Println("And what's your name?")
+	reader := Input.NewReader(os.Stdin)
+	
+	text, _ := reader.ReadString('\n')
+	Output.Println("Oh, it's nice to meet you, ", text)
 }
