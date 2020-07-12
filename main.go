@@ -69,7 +69,7 @@ func sendFileToClient(connection net.Conn, path string) {
 
 //StartServer function is the function to start the server
 func StartServer(path string, IP string){
-	server, err := net.Listen("tcp4", ":8001")
+	server, err := net.Listen("tcp", ":4662")
 	if err != nil {
 		Output.Println("Error listetning: ", err)
 		os.Exit(1)
